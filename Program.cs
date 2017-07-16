@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FuckBattlEye
+﻿namespace FuckBattlEye
 {
     class Program
     {
         static void Main(string[] args)
         {
-            FuckBattlEye.Run(@"cheat.exe", "H1Z1");
+            FuckBattlEye.Run(@"D:\Git\CSharp\TslGame_MULTI_HACK\bin\Release\BATTLEGROUNDS_EXERNAL.exe", "TslGame");
         }
     }
 }
