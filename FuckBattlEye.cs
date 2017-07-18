@@ -133,9 +133,8 @@ namespace FuckBattlEye
 
             while (ntstatus != 0/*NT_SUCCESS*/)
             {
-                ntstatus = Win32.NtQuerySystemInformation(0x10/*HANDLE INFORMATION*/, pInfo, nBufferLength, ref nBufferLength);
-                
-                if (ntstatus == 0xC0000004/*STATUS_INFO_LENGTH_MISMATCH*/)
+                ntstatus = Win32.NtQuerySystemInformation(0x10/*SYSTEM_HANDLE_INFORMATION*/, pInfo, nBufferLength, ref nBufferLength);                
+                if (ntstatus == 0xc0000004 /*STATUS_INFO_LENGTH_MISMATCH*/)
                 {
                     if (pInfo != IntPtr.Zero)
                         Marshal.FreeHGlobal(pInfo);
